@@ -87,14 +87,40 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>For general support inquiries, reach out to our helpdesk:</p>
-    <p><a href="mailto:helpdesk@gmail.com" class="email-link">helpdesk@gmail.com</a></p>
-    <p>For system administration or server operations, contact our server administrator directly:</p>
-    <p><a href="mailto:jimdalkson@protonmail.com" class="email-link">jimdalkson@protonmail.com</a></p>
-    <p>Our office lines are available Monday through Friday, 9AM–6PM PST.</p>
-  </section>
-</main>
+  <h2>Contact Us</h2>
+  <p>Have questions? Please reach out to the appropriate department below.</p>
+
+  <label for="department">Choose a department:</label>
+  <select id="department" name="department" onchange="showEmail(this.value)">
+    <option value="">-- Select --</option>
+    <option value="hr">Human Resources</option>
+    <option value="it" disabled>IT Helpdesk (Internal Only)</option>
+    <option value="support" disabled>Customer Support (Unavailable)</option>
+    <option value="sales" disabled>Sales (By Referral)</option>
+  </select>
+
+  <div id="contact-info" style="margin-top: 15px;"></div>
+
+  <script>
+    function showEmail(dept) {
+      var contactInfo = document.getElementById("contact-info");
+      var email = "";
+
+      if (dept === "hr") {
+        email = "Email Human Resources at <a href='mailto:jimdalkson@protonmail.com'>jimdalkson@protonmail.com</a>";
+      }
+
+      contactInfo.innerHTML = email ? "<p>" + email + "</p>" : "";
+    }
+  </script>
+
+  <p style="margin-top:20px; font-size: 0.9em; color: #666;">
+    Office hours: Monday–Friday, 9AM–6PM PST  
+    <br>Corporate HQ: 1820 Main Street, Suite 400, San Francisco, CA  
+    <br>Phone: (415) 555-2389
+  </p>
+</section>
+
 
 <footer>
   &copy; 2025 Acme Corporation. All rights reserved.
