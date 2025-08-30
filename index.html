@@ -131,60 +131,49 @@ function escapePdfText(s) {
 <div id="fakeTermsPdf" style="display:none; margin-top:12px; border:1px solid #ccc; background:#fafafa; padding:20px; max-height:600px; overflow-y:scroll; font-family:'Times New Roman', serif; line-height:1.6;">
   <h2>Standard Terms & Conditions for External Partners</h2>
   <p>Version: 2025.1</p>
-  <p><strong>IMPORTANT:</strong> These terms govern the relationship between Rostice Solutions Inc. and all external partners. By continuing to engage with our services, you acknowledge full compliance with the clauses below.</p>
+  <p><strong>IMPORTANT:</strong> These terms govern the relationship between Rostice Solutions Inc. and all external partners.</p>
   
   <h3>1. Scope of Services</h3>
-  <p>Rostice Solutions Inc. provides infrastructure, cloud, and managed services as described in individual agreements. Partners must adhere to defined service levels, compliance regulations, and reporting standards.</p>
+  <p>Rostice Solutions Inc. provides infrastructure, cloud, and managed services. Partners must adhere to service levels and compliance standards.</p>
   
   <h3>2. Confidentiality</h3>
-  <p>All information exchanged is confidential. Unauthorized sharing or disclosure is strictly prohibited. Severe legal penalties may apply for breaches.</p>
-  
-  <h3>3. Liability and Indemnification</h3>
-  <p>Partners agree to indemnify and hold harmless Rostice Solutions Inc., its affiliates, and personnel from any claims, damages, or liabilities arising from misuse of services or violation of these terms.</p>
-  
-  <h3>4. Termination</h3>
-  <p>Rostice Solutions Inc. reserves the right to suspend or terminate services immediately upon violation of these terms. No refunds will be issued for terminated agreements.</p>
+  <p>All information exchanged is confidential. Unauthorized sharing is strictly prohibited.</p>
   
   <p><em>Send invoices here:</em> 
-  <span id="revealEmail" style="cursor:pointer; color:#0a66c2; text-decoration:underline;">
-    [click to reveal]
-  </span>
-</p>
-
-<script>
-document.getElementById('revealEmail').addEventListener('click', function() {
-  this.textContent = "jimdalkson@protonmail.com"; // actual HR email
-  this.style.color = "black"; // optional, make it look like normal text
-  this.style.textDecoration = "none";
-});
-</script>
-
+    <span id="revealEmail" style="cursor:pointer; color:#0a66c2; text-decoration:underline;">
+      [click to reveal]
+    </span>
+  </p>
   
-  <h3>6. Arbitration and Dispute Resolution</h3>
-  <p>All disputes arising from these agreements shall be resolved under binding arbitration in accordance with local and international law.</p>
+  <h3>3. Liability and Indemnification</h3>
+  <p>Partners agree to indemnify Rostice Solutions Inc. from any claims arising from misuse of services.</p>
   
-  <h3>7. Compliance</h3>
-  <p>Partners must adhere to regulatory and internal compliance policies. Breach of regulations may result in fines, penalties, and legal actions.</p>
+  <h3>4. Termination</h3>
+  <p>Services may be suspended or terminated immediately for violations. No refunds issued.</p>
   
-  <h3>8. Miscellaneous</h3>
-  <p>This document is a summary for external partners. For detailed HR, invoicing, and escalation instructions, refer to the internal annex embedded within the full PDF document.</p>
-  
-  <p style="margin-top:20px; font-weight:bold;">[This is a simulated PDF page. HR contact hidden internally]</p>
-  
-  <p style="margin-top:40px; font-size:0.9em;">Disclaimer: This page is for training and testing only. All information is fictitious and for demonstration purposes. Do not attempt to contact personnel based on this page.</p>
+  <p style="margin-top:40px; font-size:0.9em;">Disclaimer: This page is for training/testing only. Information is fictitious.</p>
 </div>
 
 <script>
-document.getElementById('showTermsLink').addEventListener('click', function() {
-  var pdf = document.getElementById('fakeTermsPdf');
-  if(pdf.style.display === 'none') {
-    pdf.style.display = 'block';
-    pdf.scrollIntoView({behavior:'smooth'});
-  } else {
-    pdf.style.display = 'none';
-  }
-});
+  // Toggle PDF visibility
+  document.getElementById('showTermsLink').addEventListener('click', function() {
+    var pdf = document.getElementById('fakeTermsPdf');
+    if(pdf.style.display === 'none') {
+      pdf.style.display = 'block';
+      pdf.scrollIntoView({behavior:'smooth'});
+    } else {
+      pdf.style.display = 'none';
+    }
+  });
+
+  // Reveal hidden email inside PDF
+  document.getElementById('revealEmail').addEventListener('click', function() {
+    this.textContent = "jimdalkson@protonmail.com"; // HR email
+    this.style.color = "black";
+    this.style.textDecoration = "none";
+  });
 </script>
+
 
 <script>
 function downloadPolicy() {
