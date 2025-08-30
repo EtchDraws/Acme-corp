@@ -92,87 +92,59 @@
   &copy; 2025 Acme Corporation. All rights reserved.
 </footer>
 
-<script>
-function downloadBlob(filename, content, mime) {
-  var blob = new Blob([content], { type: mime });
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
-
-function makeSimplePdf(textLines) {
-  var text = textLines.join('\\n');
-  var pdf =
-    '%PDF-1.4\\n' +
-    '1 0 obj\\n<< /Type /Catalog /Pages 2 0 R >>\\nendobj\\n' +
-    '2 0 obj\\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\\nendobj\\n' +
-    '3 0 obj\\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>\\nendobj\\n' +
-    '4 0 obj\\n<< /Length ' + (text.length+120) + ' >>\\nstream\\nBT\\n/F1 12 Tf\\n50 700 Td\\n(' + escapePdfText(text) + ') Tj\\nET\\nendstream\\nendobj\\n' +
-    '5 0 obj\\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\\nendobj\\n' +
-    'xref\\n0 6\\n0000000000 65535 f\\n0000000010 00000 n\\n0000000063 00000 n\\n0000000114 00000 n\\n0000000261 00000 n\\n0000000460 00000 n\\n' +
-    'trailer\\n<< /Size 6 /Root 1 0 R >>\\nstartxref\\n600\\n%%EOF\\n';
-  return pdf;
-}
-
-function escapePdfText(s) {
-  return s.replace(/([\\()])/g,"\\\\$1").replace(/\n/g,"\\\\n");
-}
-
-/* Fake PDFs */
 <!-- TERMS & SERVICES LINK -->
-<span class="link" id="showTermsLink">Terms & Services</span>
+<p><span class="link" id="showTermsLink">Terms & Services</span></p>
 
 <!-- HIDDEN TERMS PAGE -->
 <div id="fakeTermsPdf" style="display:none; margin-top:12px; border:1px solid #ccc; background:#fafafa; padding:20px; max-height:600px; overflow-y:scroll; font-family:'Times New Roman', serif; line-height:1.6;">
   <h2>Standard Terms & Conditions for External Partners</h2>
   <p>Version: 2025.1</p>
   <p><strong>IMPORTANT:</strong> These terms govern the relationship between Rostice Solutions Inc. and all external partners.</p>
-  
+
   <h3>1. Scope of Services</h3>
   <p>Rostice Solutions Inc. provides infrastructure, cloud, and managed services. Partners must adhere to service levels and compliance standards.</p>
-  
+
   <h3>2. Confidentiality</h3>
   <p>All information exchanged is confidential. Unauthorized sharing is strictly prohibited.</p>
-  
+
   <p><em>Send invoices here:</em> 
     <span id="revealEmail" style="cursor:pointer; color:#0a66c2; text-decoration:underline;">
       [click to reveal]
     </span>
   </p>
-  
+
   <h3>3. Liability and Indemnification</h3>
   <p>Partners agree to indemnify Rostice Solutions Inc. from any claims arising from misuse of services.</p>
-  
+
   <h3>4. Termination</h3>
   <p>Services may be suspended or terminated immediately for violations. No refunds issued.</p>
-  
+
   <p style="margin-top:40px; font-size:0.9em;">Disclaimer: This page is for training/testing only. Information is fictitious.</p>
 </div>
 
 <script>
-  // Toggle PDF visibility
-  document.getElementById('showTermsLink').addEventListener('click', function() {
-    var pdf = document.getElementById('fakeTermsPdf');
-    if(pdf.style.display === 'none') {
-      pdf.style.display = 'block';
-      pdf.scrollIntoView({behavior:'smooth'});
+  // Toggle Terms PDF visibility
+  var termsLink = document.getElementById('showTermsLink');
+  var termsPdf = document.getElementById('fakeTermsPdf');
+
+  termsLink.addEventListener('click', function() {
+    if(termsPdf.style.display === 'none') {
+      termsPdf.style.display = 'block';
+      termsPdf.scrollIntoView({behavior:'smooth'});
     } else {
-      pdf.style.display = 'none';
+      termsPdf.style.display = 'none';
     }
   });
 
-  // Reveal hidden email inside PDF
-  document.getElementById('revealEmail').addEventListener('click', function() {
-    this.textContent = "jimdalkson@protonmail.com"; // HR email
+  // Reveal hidden email
+  var revealEmail = document.getElementById('revealEmail');
+  revealEmail.addEventListener('click', function() {
+    this.textContent = "jimdalkson@protonmail.com";
     this.style.color = "black";
     this.style.textDecoration = "none";
   });
 </script>
+
 
 
 <script>
