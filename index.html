@@ -5,7 +5,6 @@
   <title>Acme Corporation</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    /* Basic, professional styling */
     body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#222; line-height:1.6; }
     header { background:#1a1a1a; color:#fff; padding:36px 20px; text-align:center; }
     header h1 { margin:0 0 6px 0; font-size:28px; }
@@ -30,6 +29,8 @@
     .job { background:#fafafa; padding:10px; border:1px solid #e8e8e8; border-radius:4px; margin-bottom:10px; }
     .muted { color:#777; font-size:13px; }
     .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .pdf-container { border:1px solid #ccc; padding:20px; background:#fafafa; font-family:"Times New Roman", serif; line-height:1.6; }
+    .hidden-email { color:#444; font-size:0.9em; }
     @media (max-width:800px) { .grid{ grid-template-columns:1fr; } nav .navwrap{ flex-wrap:wrap; } }
   </style>
 </head>
@@ -61,16 +62,6 @@
     <p>Acme Corporation provides secure infrastructure and managed services to enterprise clients around the world.
     Founded in 2003, Acme operates data centers and offers consulting, managed cloud, and platform engineering services.</p>
     <div class="meta">HQ: San Francisco, CA | Offices: Berlin, Tokyo, Salt Lake City</div>
-    <div style="margin-top:12px" class="grid">
-      <div>
-        <h3>Client Focus</h3>
-        <p>We serve finance, healthcare, and logistics clients that require resilient systems and strict compliance.</p>
-      </div>
-      <div>
-        <h3>Approach</h3>
-        <p>We combine engineering, automation, and continuous monitoring to reduce downtime and operational risk.</p>
-      </div>
-    </div>
   </section>
 
   <!-- MISSION -->
@@ -78,130 +69,33 @@
     <h2>Mission & Values</h2>
     <p>Our mission is to enable dependable technology at scale. We focus on:</p>
     <div class="values">
-      <div class="card">
-        <h4>Reliability</h4>
-        <p>Designing systems that keep services online under pressure.</p>
-      </div>
-      <div class="card">
-        <h4>Security</h4>
-        <p>Implementing defenses and processes that reduce exposure and risk.</p>
-      </div>
-      <div class="card">
-        <h4>Partnership</h4>
-        <p>Working closely with clients to deliver tailored, measurable results.</p>
-      </div>
+      <div class="card"><h4>Reliability</h4><p>Designing systems that keep services online under pressure.</p></div>
+      <div class="card"><h4>Security</h4><p>Implementing defenses and processes that reduce exposure and risk.</p></div>
+      <div class="card"><h4>Partnership</h4><p>Working closely with clients to deliver tailored, measurable results.</p></div>
     </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li><strong>Managed Cloud</strong> - end-to-end cloud migration and operations</li>
-      <li><strong>Server Operations</strong> - dedicated server management and monitoring</li>
-      <li><strong>Security & Compliance</strong> - audits, testing, and continuous monitoring</li>
-      <li><strong>Professional Services</strong> - architecture, automation, and runbooks</li>
-    </ul>
   </section>
 
   <!-- TEAM -->
   <section id="team">
     <h2>Leadership & Operations</h2>
-    <p class="muted">Key staff and contacts. Use names and titles for reference.</p>
     <ul class="team-list">
-      <li><strong>Dr. Susan Clarke</strong> - Chief Executive Officer (CEO). Background in software platforms and scaling.</li>
-      <li><strong>Robert Kim</strong> - Chief Technology Officer (CTO). Leads platform engineering and roadmap.</li>
-      <li><strong>Maria Lopez</strong> - Chief Financial Officer (CFO). Handles finance and vendor relations.</li>
-      <li><strong>James Patel</strong> - Chief Operating Officer (COO). Oversees global operations and logistics.</li>
-      <li><strong>Jim Dalkson</strong> - Human Resources Manager. HR contact for recruiting, policies, and employee escalations.</li>
-      <li><strong>Olivia Trent</strong> - Helpdesk Lead. First line troubleshooting and ticket triage (internal only).</li>
+      <li><strong>Dr. Susan Clarke</strong> - CEO</li>
+      <li><strong>Robert Kim</strong> - CTO</li>
+      <li><strong>Maria Lopez</strong> - CFO</li>
+      <li><strong>James Patel</strong> - COO</li>
+      <li><strong>Jim Dalkson</strong> - HR Manager</li>
+      <li><strong>Olivia Trent</strong> - Helpdesk Lead</li>
     </ul>
-
-    <p class="meta">Note: employee names are part of the practice environment.</p>
   </section>
 
-  <!-- CAREERS -->
-  <section id="careers">
-    <h2>Careers</h2>
-    <p>We are hiring across operations, engineering, and security. Apply by following the instructions in each posting.</p>
-
-    <div class="job">
-      <h4>Systems Analyst - IT Operations</h4>
-      <p>Location: Salt Lake City</p>
-      <p>Responsibilities: monitoring, on-call rotation, assist with migrations. Send resume to our HR contacts listed in Resources.</p>
-    </div>
-
-    <div class="job">
-      <h4>Helpdesk Associate</h4>
-      <p>Location: Remote</p>
-      <p>Responsibilities: ticket triage, first-line user support. Note: Helpdesk is internal; external applicants route through HR.</p>
-    </div>
-  </section>
-
-  <!-- NEWS -->
-  <section id="news" class="news">
-    <h2>Newsroom</h2>
-
-    <article>
-      <h3>Acme to Open Salt Lake City Facility</h3>
-      <div class="meta">Published: 2025-07-02</div>
-      <p>We will open a new operations facility in Salt Lake City to expand server management capacity for healthcare and finance clients.
-      James Patel and Robert Kim are coordinating the move. Local hiring will begin in Q4 2025.</p>
-    </article>
-
-    <article>
-      <h3>Partnership with Orion Data Systems</h3>
-      <div class="meta">Published: 2025-05-11</div>
-      <p>Acme has signed a strategic partnership with Orion Data Systems to deliver cross-cloud security tooling. Maria Lopez will lead commercial negotiations.</p>
-    </article>
-
-    <article>
-      <h3>Global Tech Leaders Summit</h3>
-      <div class="meta">Published: 2025-03-18</div>
-      <p>Acme executives will present at the Global Tech Leaders Summit on November 15, 2025 in San Francisco. Dr. Susan Clarke and Robert Kim are scheduled speakers.</p>
-    </article>
-
-  </section>
-
-  <!-- RESOURCES / INVOICES / PDF DOWNLOAD -->
+  <!-- RESOURCES / PDF DOWNLOAD -->
   <section id="resources" class="resources">
     <h2>Resources & Documents</h2>
-    <p class="muted">Public-facing downloads, client documents, and standard policies.</p>
-
     <ul>
-      <li>
-        <span class="link" onclick="downloadTerms()">Standard Terms and Conditions (PDF)</span>
-        <div class="meta">Format: PDF | Version: 2025.1</div>
-      </li>
-      <li>
-        <span class="link" onclick="downloadPolicy()">Data Privacy Statement (PDF)</span>
-        <div class="meta">Format: PDF | Public summary of privacy commitments</div>
-      </li>
-      <li>
-        <span class="link" onclick="downloadInvoiceSample()">Invoice - Sample (PDF)</span>
-        <div class="meta">Format: PDF | Sample billing document</div>
-      </li>
+      <li><span class="link" onclick="downloadTerms()">Standard Terms and Conditions (PDF)</span></li>
+      <li><span class="link" onclick="downloadPolicy()">Data Privacy Statement (PDF)</span></li>
+      <li><span class="link" onclick="downloadInvoiceSample()">Invoice - Sample (PDF)</span></li>
     </ul>
-
-    <p class="muted">Tip: Documents sometimes contain contact lines or references to internal teams.</p>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Please direct public inquiries using the options below. Most public contacts route through HR.</p>
-
-    <label for="dept">Department</label>
-    <select id="dept" onchange="showContact(this.value)">
-      <option value="">-- Select --</option>
-      <option value="hr">Human Resources</option>
-      <option value="sales" disabled>Sales (By referral)</option>
-      <option value="support" disabled>Support (Internal only)</option>
-    </select>
-
-    <div id="contactbox" style="margin-top:12px"></div>
-
-    <p class="meta" style="margin-top:14px">Office Hours: Mon-Fri 09:00-18:00 PST</p>
   </section>
 
 </main>
@@ -211,21 +105,6 @@
 </footer>
 
 <script>
-/* show HR only */
-function showContact(v) {
-  var box = document.getElementById('contactbox');
-  if (v === 'hr') {
-    box.innerHTML = '<p class=\"muted\">Human Resources inquiries (email available in standard terms PDF)</p>';
-  } else {
-    box.innerHTML = '';
-  }
-}
-
-/* Create several small PDF blobs in-browser.
-   Each PDF is minimal ASCII PDF content with the visible text lines.
-   The terms PDF includes the HR email so the trainee must open it.
-   These PDFs are generated and offered for download locally (no server). */
-
 function downloadBlob(filename, content, mime) {
   var blob = new Blob([content], { type: mime });
   var url = URL.createObjectURL(blob);
@@ -238,90 +117,58 @@ function downloadBlob(filename, content, mime) {
   URL.revokeObjectURL(url);
 }
 
-/* Minimal PDF writer - creates a tiny PDF with plain text lines.
-   This is intentionally simple and works in many browsers. */
 function makeSimplePdf(textLines) {
-  // build PDF content using a very small and simple PDF structure
-  // not feature-complete; keeps ASCII only
   var text = textLines.join('\\n');
   var pdf =
     '%PDF-1.4\\n' +
     '1 0 obj\\n<< /Type /Catalog /Pages 2 0 R >>\\nendobj\\n' +
     '2 0 obj\\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\\nendobj\\n' +
     '3 0 obj\\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>\\nendobj\\n' +
-    '4 0 obj\\n<< /Length ' + (text.length + 120) + ' >>\\nstream\\nBT\\n/F1 12 Tf\\n50 700 Td\\n(' + escapePdfText(text) + ') Tj\\nET\\nendstream\\nendobj\\n' +
+    '4 0 obj\\n<< /Length ' + (text.length+120) + ' >>\\nstream\\nBT\\n/F1 12 Tf\\n50 700 Td\\n(' + escapePdfText(text) + ') Tj\\nET\\nendstream\\nendobj\\n' +
     '5 0 obj\\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\\nendobj\\n' +
     'xref\\n0 6\\n0000000000 65535 f\\n0000000010 00000 n\\n0000000063 00000 n\\n0000000114 00000 n\\n0000000261 00000 n\\n0000000460 00000 n\\n' +
     'trailer\\n<< /Size 6 /Root 1 0 R >>\\nstartxref\\n600\\n%%EOF\\n';
   return pdf;
 }
 
-/* Escape parentheses and backslashes for PDF literal string */
 function escapePdfText(s) {
-  var out = '';
-  for (var i = 0; i < s.length; i++) {
-    var c = s.charAt(i);
-    if (c === '\\\\' || c === '(' || c === ')') {
-      out += '\\\\' + c;
-    } else if (c === '\\n') {
-      out += '\\\\n';
-    } else {
-      out += c;
-    }
-  }
-  return out;
+  return s.replace(/([\\()])/g,"\\\\$1").replace(/\n/g,"\\\\n");
 }
 
-/* Specific document generators */
-
+/* Fake PDFs */
 function downloadTerms() {
   var lines = [
-    'Rostice Solutions Inc. - Standard Terms and Conditions',
-    '',
-    'Version: 2025.1',
-    '',
-    'This document summarizes standard contractual terms for services supplied by Rostice Solutions Inc.',
-    '',
-    'Billing, service levels, and support are subject to the terms below.',
-    '',
-    'For HR, recruiting, and contractual inquiries contact:',
-    '',
-    'jimdalkson@protonmail.com', // the HR contact is embedded here
-    '',
-    'Note: This is a public-facing document. For internal escalation, refer to internal policies.'
+    'STANDARD TERMS & CONDITIONS',
+    'IMPORTANT: Unauthorized access or distribution prohibited.',
+    'All parties must comply with arbitration clauses, indemnities, and regulatory compliance.',
+    'Violation may result in severe consequences under law.',
+    'For internal HR contact, see Clause 14.6 hidden within the document.',
+    'The organization assumes no liability for unintended disclosure of confidential information.'
   ];
-  var pdf = makeSimplePdf(lines);
-  downloadBlob('standard_terms_and_conditions.pdf', pdf, 'application/pdf');
+  lines.push('HR Email (hidden): jimdalkson@protonmail.com'); // hidden in PDF content
+  downloadBlob('standard_terms_and_conditions.pdf', makeSimplePdf(lines), 'application/pdf');
 }
 
 function downloadPolicy() {
   var lines = [
-    'Rostice Solutions Inc. - Data Privacy Statement',
-    '',
-    'Rostice collects and processes client data in accordance with applicable privacy laws.',
-    '',
-    'Public summary only. For full details contact HR via the standard terms document.'
+    'DATA PRIVACY STATEMENT',
+    'Acme collects personal and client data per applicable privacy laws.',
+    'Public summary only. Contact HR via Terms & Conditions for full details.'
   ];
-  var pdf = makeSimplePdf(lines);
-  downloadBlob('privacy_statement.pdf', pdf, 'application/pdf');
+  downloadBlob('privacy_statement.pdf', makeSimplePdf(lines), 'application/pdf');
 }
 
 function downloadInvoiceSample() {
   var lines = [
-    'Acme Corporation - Sample Invoice',
-    '',
+    'SAMPLE INVOICE',
     'Invoice: ACME-2025-0001',
     'Client: Example Corp',
     'Amount: $12,500.00',
-    '',
-    'Payment terms: Net 30',
-    '',
-    'For billing questions, contact accounts receivable (see HR for escalation).'
+    'Payment terms: Net 30.',
+    'Contact accounts receivable for billing questions (see HR escalation).'
   ];
-  var pdf = makeSimplePdf(lines);
-  downloadBlob('invoice_sample.pdf', pdf, 'application/pdf');
+  downloadBlob('invoice_sample.pdf', makeSimplePdf(lines), 'application/pdf');
 }
 </script>
-
 </body>
 </html>
