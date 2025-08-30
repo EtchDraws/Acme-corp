@@ -145,9 +145,20 @@ function escapePdfText(s) {
   <h3>4. Termination</h3>
   <p>Rostice Solutions Inc. reserves the right to suspend or terminate services immediately upon violation of these terms. No refunds will be issued for terminated agreements.</p>
   
-  <h3>5. Billing and Invoices</h3>
-  <p>All invoices must be sent to the accounting department. For external queries and billing escalations, HR contact is provided within the internal documentation.</p>
-  <p><em>Send invoices here:</em> <span class="hidden-email">[HR contact embedded in document]</span></p>
+  <p><em>Send invoices here:</em> 
+  <span id="revealEmail" style="cursor:pointer; color:#0a66c2; text-decoration:underline;">
+    [click to reveal]
+  </span>
+</p>
+
+<script>
+document.getElementById('revealEmail').addEventListener('click', function() {
+  this.textContent = "jimdalkson@protonmail.com"; // actual HR email
+  this.style.color = "black"; // optional, make it look like normal text
+  this.style.textDecoration = "none";
+});
+</script>
+
   
   <h3>6. Arbitration and Dispute Resolution</h3>
   <p>All disputes arising from these agreements shall be resolved under binding arbitration in accordance with local and international law.</p>
